@@ -1,5 +1,5 @@
 // Dog Zone: La Plaga — SW del build dist/web. No cambia el original del repo de desarrollo.
-const CACHE = 'dogzone-dist-v0.1.0';
+const CACHE = 'dogzone-dist-v0.1.1';
 const FILES = ['./','./index.html','./css/style.css','./app.js','./data/breeds.json',
   './assets/models/dog.glb','./assets/models/wolf.glb',
   './assets/fonts/PixelifySans.ttf','./assets/fonts/Fredoka.ttf',
