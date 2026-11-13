@@ -1,17 +1,17 @@
-# Dog Zone: La Plaga — prototipo v0.1.2
+# Dog Zone: La Plaga — prototipo v0.1.3
 
 Juego web mobile (PWA) en español (voseo). Criás perros inmunes en un asentamiento post-apocalíptico, los mandás de misión y combates infectados en la zona de la plaga.
 
-Prototipo **Fase 0 / v0.1.2**. No está publicado. No hay compras ni anuncios. Los números de economía son valores de prueba, no el balance final.
+Prototipo **Fase 0 / v0.1.3**. No está publicado. No hay compras ni anuncios. Los números de economía son valores de prueba, no el balance final.
 
 ## Cómo jugarlo
 
 - Abrí `index.html` con un servidor local (no sirve `file://` por los módulos).
 - Versión lista para copiar a un teléfono o host estático: `dist/web/`.
 - Un solo archivo, para mandar o abrir más fácil: `dist/DogZone.html`.
-- En el teléfono: se juega **de costado** (landscape). Si lo abrís en vertical, aparece “Girá el teléfono 📱↻” y la opción “Jugar igual en vertical”.
+- En el teléfono: se juega **de costado**. Si el giro automático está bloqueado, el juego se rota solo (landscape forzado) y te pide que acuestes el teléfono hacia la izquierda. En el menú está “Jugar en vertical”.
 - Joystick abajo a la izquierda, Atacar abajo a la derecha, botón **Pantalla completa**. WASD en la compu.
-- En algunos navegadores (sobre todo iOS Safari) no se puede forzar la rotación: hay que girar el teléfono a mano. El candado `orientation.lock` solo funciona en PWA o después de entrar a pantalla completa, y no en iOS.
+- En algunos navegadores (sobre todo iOS Safari) no se puede usar `orientation.lock`: el landscape forzado (CSS rotate 90°) cubre ese caso. El candado nativo se intenta igual en PWA o pantalla completa.
 - Teclas: WASD o flechas para mover, Shift para correr, E para la acción del contexto, Espacio para atacar, rueda para zoom.
 
 Guardado: solo en este aparato (`localStorage`, clave `dogzone_save_v1`).
@@ -64,7 +64,7 @@ Copia de la página de licencia: `assets/licenses/`.
 
 ## Cómo se probó
 
-`tests/play.mjs` abre el juego en un celular simulado con Playwright + Chromium (WebGL por SwiftShader), recorre tutorial, comida, diálogo, misión, tienda, bolso, zona y combate, y comprueba que al recargar se mantiene el guardado. `tests/touch.mjs` prueba que el joystick responde al tacto y que nada lo tapa. `tests/landscape.mjs` prueba el layout de costado (844×390 y 915×412) y el overlay en vertical (390×844). Las capturas están en `screenshots/` (las de costado: `landscape-*.png`).
+`tests/play.mjs` abre el juego en un celular simulado con Playwright + Chromium (WebGL por SwiftShader), recorre tutorial, comida, diálogo, misión, tienda, bolso, zona y combate, y comprueba que al recargar se mantiene el guardado. `tests/touch.mjs` prueba que el joystick responde al tacto y que nada lo tapa. `tests/landscape.mjs` prueba el layout de costado (844×390 y 915×412) y el landscape forzado en vertical (390×844). `tests/joystick.mjs` comprueba que arriba/abajo/izquierda/derecha del joystick y WASD mueven al personaje en la dirección correcta de la pantalla, en landscape, retrato y landscape forzado. Las capturas están en `screenshots/` (`landscape-*.png`, `forced-*.png`).
 
 El FPS en SwiftShader (render por software) ronda 25–30; no representa un teléfono de verdad. En esta corrida: ~100 draw calls y ~36 mil triángulos.
 
@@ -78,7 +78,7 @@ El FPS en SwiftShader (render por software) ronda 25–30; no representa un tel�
 - Tienda de Chapitas: placeholder.
 - Tiempos y precios: valores de prueba, más cortos que los del white paper, para poder probarlos.
 - No se testeó todavía en un teléfono físico.
-- iOS Safari no permite `screen.orientation.lock`: el juego pide girar el teléfono, pero no puede rotar la pantalla solo.
+- iOS Safari no permite `screen.orientation.lock`: se usa landscape forzado (el contenedor gira 90°) y se pide acostar el teléfono.
 - No hay modo en línea ni ranking.
 
 ## No publicar

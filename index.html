@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#2a1a14">
-<meta name="description" content="Dog Zone: La Plaga — prototipo v0.1.2. Criá perros inmunes en un mundo con plaga.">
+<meta name="description" content="Dog Zone: La Plaga — prototipo v0.1.3. Criá perros inmunes en un mundo con plaga.">
 <title>Dog Zone: La Plaga</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
@@ -12,6 +12,20 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<script>
+(function () {
+  try {
+    var vv = window.visualViewport;
+    var w = vv ? vv.width : innerWidth, h = vv ? vv.height : innerHeight;
+    var portrait = h > w + 20;
+    var mobile = matchMedia('(pointer:coarse)').matches || matchMedia('(max-width:900px)').matches;
+    if (!portrait) document.body.classList.add('landscape-layout');
+    else if (mobile) document.body.classList.add('forced-landscape', 'landscape-layout');
+    if ((portrait ? w : h) <= 480) document.body.classList.add('short-hud');
+  } catch (e) {}
+})();
+</script>
+<div id="stage">
 <div id="game"></div>
 <div id="tags"></div>
 
@@ -79,13 +93,14 @@
   <div id="toast"></div>
 </div>
 
-<!-- Pedido de girar el teléfono (no bloquea: se puede jugar igual en vertical) -->
+<!-- Tip de giro (no bloquea: el juego ya está rotado en vertical) -->
 <div id="rotate" class="hidden">
   <div class="rotate-card panel">
     <div class="phone-turn" aria-hidden="true">📱↻</div>
-    <h2>Girá el teléfono 📱↻</h2>
-    <p>De costado hay más espacio para la aldea, el joystick y los botones.</p>
-    <button id="btn-portrait-ok" class="pill">Jugar igual en vertical</button>
+    <h2>Girá el teléfono de costado</h2>
+    <p>El juego ya está acostado. Si la pantalla no giró sola, recostá el teléfono hacia la izquierda (botones de volumen arriba).</p>
+    <button id="btn-rotate-ok" class="pill">Listo</button>
+    <button id="btn-portrait-ok" class="link">Jugar en vertical</button>
   </div>
 </div>
 
@@ -107,6 +122,7 @@
     <div class="tutbtns"><button id="tutskip" class="link">Saltar tutorial</button><button id="tutnext" class="pill">¡Dale!</button></div>
   </div>
 </div>
+</div><!-- /stage -->
 
 <noscript>Este juego necesita JavaScript.</noscript>
 <script type="module" src="app.js"></script>
