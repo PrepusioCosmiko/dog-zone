@@ -1,0 +1,1491 @@
+{
+  "_meta": {
+    "juego": "Dog Zone: La Plaga",
+    "version": "0.1",
+    "fecha_consulta": "2026-11-13 (hora de Argentina, UTC-3)",
+    "regla": "Los campos de 'real' salen de los estándares FCI (fci.be) y de las fichas AKC (akc.org). Los valores null no se pudieron verificar y no se inventaron. Las libras y pulgadas de AKC se pasaron a kg/cm redondeando. Todo lo que está en 'juego' (nivel, stats 1-10, oficios, precio) es diseño de juego y NO es un dato real.",
+    "derivacion_stats": "fuerza ∝ peso + bono guardia/caza mayor; velocidad ∝ alzada − exceso de peso + bono lebrel; resistencia por oficio (trineo, pastoreo, caza); olfato +5 sabuesos/rastreo; lealtad + guardia/policía/compañía. Nivel: total ≥35 fuerte, 28–34 medio, <28 débil."
+  },
+  "razas": [
+    {
+      "id": "dogo_argentino",
+      "nombre": "Dogo argentino",
+      "pais_origen": "Argentina",
+      "real": {
+        "fci_numero": 292,
+        "fci_pais_origen_literal": "Argentina",
+        "fci_uso_original": "Big-game hunting dog.",
+        "alzada_cm_macho": "60–68",
+        "alzada_cm_hembra": "60–65",
+        "peso_kg_macho": "40–45",
+        "peso_kg_hembra": "40–43",
+        "peso_fuente": "FCI",
+        "akc_altura": "24-26.5 in (macho), 24-25.5 in (hembra)",
+        "akc_peso": "80-100 lb",
+        "esperanza_vida_anios": "9–15",
+        "vida_fuente": "AKC",
+        "notas": "Raza argentina. FCI: nunca agresivo con humanos."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "fuerte",
+        "stats": {
+          "fuerza": 10,
+          "velocidad": 6,
+          "resistencia": 7,
+          "olfato": 6,
+          "lealtad": 8
+        },
+        "total": 37,
+        "oficios": [
+          "caza mayor",
+          "guardia"
+        ],
+        "precio_latas_estimado": 308
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 292 DOGO ARGENTINO",
+          "url": "https://www.fci.be/Nomenclature/Standards/292g02-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Dogo argentino",
+          "url": "https://www.akc.org/dog-breeds/dogo-argentino/"
+        }
+      ]
+    },
+    {
+      "id": "pastor_aleman",
+      "nombre": "Pastor alemán",
+      "pais_origen": "Alemania",
+      "real": {
+        "fci_numero": 166,
+        "fci_pais_origen_literal": "Germany",
+        "fci_uso_original": "Versatile working, herding and service dog.",
+        "alzada_cm_macho": "60–65",
+        "alzada_cm_hembra": "55–60",
+        "peso_kg_macho": "30–40",
+        "peso_kg_hembra": "22–32",
+        "peso_fuente": "FCI",
+        "akc_altura": "24-26 in / 22-24 in",
+        "akc_peso": "65-90 lb / 50-70 lb",
+        "esperanza_vida_anios": "12–14",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "fuerte",
+        "stats": {
+          "fuerza": 7,
+          "velocidad": 7,
+          "resistencia": 9,
+          "olfato": 10,
+          "lealtad": 10
+        },
+        "total": 43,
+        "oficios": [
+          "policía",
+          "pastoreo/ayuda",
+          "rastreo"
+        ],
+        "precio_latas_estimado": 332
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 166 DEUTSCHER SCHÄFERHUND",
+          "url": "https://www.fci.be/Nomenclature/Standards/166g01-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Pastor alemán",
+          "url": "https://www.akc.org/dog-breeds/german-shepherd-dog/"
+        }
+      ]
+    },
+    {
+      "id": "rottweiler",
+      "nombre": "Rottweiler",
+      "pais_origen": "Alemania",
+      "real": {
+        "fci_numero": 147,
+        "fci_pais_origen_literal": "Germany",
+        "fci_uso_original": "Companion, service and working dog.",
+        "alzada_cm_macho": "61–68",
+        "alzada_cm_hembra": "56–63",
+        "peso_kg_macho": "≈50",
+        "peso_kg_hembra": "≈42",
+        "peso_fuente": "FCI",
+        "akc_altura": "24-27 in / 22-25 in",
+        "akc_peso": "95-135 lb / 80-100 lb",
+        "esperanza_vida_anios": "9–10",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "medio",
+        "stats": {
+          "fuerza": 10,
+          "velocidad": 6,
+          "resistencia": 5,
+          "olfato": 4,
+          "lealtad": 8
+        },
+        "total": 33,
+        "oficios": [
+          "guardia"
+        ],
+        "precio_latas_estimado": 172
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 147 ROTTWEILER",
+          "url": "https://www.fci.be/Nomenclature/Standards/147g02-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Rottweiler",
+          "url": "https://www.akc.org/dog-breeds/rottweiler/"
+        }
+      ]
+    },
+    {
+      "id": "dobermann",
+      "nombre": "Dobermann",
+      "pais_origen": "Alemania",
+      "real": {
+        "fci_numero": 143,
+        "fci_pais_origen_literal": "Germany",
+        "fci_uso_original": "Companion, protection and working dog.",
+        "alzada_cm_macho": "68–72",
+        "alzada_cm_hembra": "63–68",
+        "peso_kg_macho": "40–45",
+        "peso_kg_hembra": "32–35",
+        "peso_fuente": "FCI",
+        "akc_altura": "26-28 in / 24-26 in",
+        "akc_peso": "75-100 lb / 60-90 lb",
+        "esperanza_vida_anios": "10–12",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "fuerte",
+        "stats": {
+          "fuerza": 10,
+          "velocidad": 8,
+          "resistencia": 7,
+          "olfato": 6,
+          "lealtad": 8
+        },
+        "total": 39,
+        "oficios": [
+          "guardia",
+          "policía"
+        ],
+        "precio_latas_estimado": 316
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 143 DOBERMANN",
+          "url": "https://www.fci.be/Nomenclature/Standards/143g02-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Dobermann",
+          "url": "https://www.akc.org/dog-breeds/doberman-pinscher/"
+        }
+      ]
+    },
+    {
+      "id": "teckel",
+      "nombre": "Teckel (dachshund)",
+      "pais_origen": "Alemania",
+      "real": {
+        "fci_numero": 148,
+        "fci_pais_origen_literal": "Germany",
+        "fci_uso_original": "Hunting dog, above and below ground.",
+        "alzada_cm_macho": null,
+        "alzada_cm_hembra": null,
+        "peso_kg_macho": "7,3–14,5",
+        "peso_kg_hembra": "7,3–14,5",
+        "peso_fuente": "AKC (16-32 lb, estándar)",
+        "akc_altura": "8-9 in (estándar)",
+        "akc_peso": "16-32 lb (estándar)",
+        "esperanza_vida_anios": "12–16",
+        "vida_fuente": "AKC",
+        "notas": "FCI no da alzada: mide perímetro torácico (estándar: machos 37–47 cm, hembras 35–45 cm)."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "medio",
+        "stats": {
+          "fuerza": 3,
+          "velocidad": 5,
+          "resistencia": 6,
+          "olfato": 10,
+          "lealtad": 4
+        },
+        "total": 28,
+        "oficios": [
+          "rastreo",
+          "caza menor"
+        ],
+        "precio_latas_estimado": 152
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 148 DACHSHUND",
+          "url": "https://www.fci.be/Nomenclature/Standards/148g04-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Teckel (dachshund)",
+          "url": "https://www.akc.org/dog-breeds/dachshund/"
+        }
+      ]
+    },
+    {
+      "id": "boxer",
+      "nombre": "Bóxer",
+      "pais_origen": "Alemania",
+      "real": {
+        "fci_numero": 144,
+        "fci_pais_origen_literal": "Germany",
+        "fci_uso_original": "Companion, Guard and Working Dog.",
+        "alzada_cm_macho": "57–63",
+        "alzada_cm_hembra": "53–59",
+        "peso_kg_macho": ">30",
+        "peso_kg_hembra": "≈25",
+        "peso_fuente": "FCI",
+        "akc_altura": "23-25 in / 21.5-23.5 in",
+        "akc_peso": "65-80 lb (macho)",
+        "esperanza_vida_anios": "10–12",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "medio",
+        "stats": {
+          "fuerza": 8,
+          "velocidad": 6,
+          "resistencia": 4,
+          "olfato": 4,
+          "lealtad": 10
+        },
+        "total": 32,
+        "oficios": [
+          "guardia",
+          "compañía/alerta"
+        ],
+        "precio_latas_estimado": 168
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 144 DEUTSCHER BOXER",
+          "url": "https://www.fci.be/Nomenclature/Standards/144g02-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Bóxer",
+          "url": "https://www.akc.org/dog-breeds/boxer/"
+        }
+      ]
+    },
+    {
+      "id": "gran_danes",
+      "nombre": "Gran danés",
+      "pais_origen": "Alemania",
+      "real": {
+        "fci_numero": 235,
+        "fci_pais_origen_literal": "Germany",
+        "fci_uso_original": "Companion, watch- and guard dog.",
+        "alzada_cm_macho": "80–90",
+        "alzada_cm_hembra": "72–84",
+        "peso_kg_macho": "63–79",
+        "peso_kg_hembra": "50–64",
+        "peso_fuente": "AKC (140-175 / 110-140 lb)",
+        "akc_altura": "30-32 in / 28-30 in",
+        "akc_peso": "140-175 lb / 110-140 lb",
+        "esperanza_vida_anios": "7–10",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "medio",
+        "stats": {
+          "fuerza": 10,
+          "velocidad": 5,
+          "resistencia": 5,
+          "olfato": 4,
+          "lealtad": 8
+        },
+        "total": 32,
+        "oficios": [
+          "guardia"
+        ],
+        "precio_latas_estimado": 168
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 235 DEUTSCHE DOGGE",
+          "url": "https://www.fci.be/Nomenclature/Standards/235g02-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Gran danés",
+          "url": "https://www.akc.org/dog-breeds/great-dane/"
+        }
+      ]
+    },
+    {
+      "id": "weimaraner",
+      "nombre": "Braco de Weimar",
+      "pais_origen": "Alemania",
+      "real": {
+        "fci_numero": 99,
+        "fci_pais_origen_literal": "Germany",
+        "fci_uso_original": "According to his hunting purpose as a versatile hunting dog, the Weimaraner must possess all the talents required of him, and be able to be used for all work...",
+        "alzada_cm_macho": "59–70",
+        "alzada_cm_hembra": "57–65",
+        "peso_kg_macho": "30–40",
+        "peso_kg_hembra": "25–35",
+        "peso_fuente": "FCI",
+        "akc_altura": "25-27 in / 23-25 in",
+        "akc_peso": "70-90 lb / 55-75 lb",
+        "esperanza_vida_anios": "10–13",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "fuerte",
+        "stats": {
+          "fuerza": 8,
+          "velocidad": 6,
+          "resistencia": 6,
+          "olfato": 10,
+          "lealtad": 5
+        },
+        "total": 35,
+        "oficios": [
+          "rastreo",
+          "caza mayor"
+        ],
+        "precio_latas_estimado": 300
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 99 WEIMARANER",
+          "url": "https://www.fci.be/Nomenclature/Standards/099g07-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Braco de Weimar",
+          "url": "https://www.akc.org/dog-breeds/weimaraner/"
+        }
+      ]
+    },
+    {
+      "id": "dogo_burdeos",
+      "nombre": "Dogo de Burdeos",
+      "pais_origen": "Francia",
+      "real": {
+        "fci_numero": 116,
+        "fci_pais_origen_literal": "France",
+        "fci_uso_original": "Guard, defence and dissuasion.",
+        "alzada_cm_macho": "60–68",
+        "alzada_cm_hembra": "58–66",
+        "peso_kg_macho": "≥50",
+        "peso_kg_hembra": "≥45",
+        "peso_fuente": "FCI",
+        "akc_altura": "23-27 in / 23-26 in",
+        "akc_peso": "≥110 lb / ≥99 lb",
+        "esperanza_vida_anios": "5–8",
+        "vida_fuente": "AKC",
+        "notas": "Vida corta según AKC."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "medio",
+        "stats": {
+          "fuerza": 10,
+          "velocidad": 5,
+          "resistencia": 5,
+          "olfato": 4,
+          "lealtad": 8
+        },
+        "total": 32,
+        "oficios": [
+          "guardia"
+        ],
+        "precio_latas_estimado": 168
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 116 DOGUE DE BORDEAUX",
+          "url": "https://www.fci.be/Nomenclature/Standards/116g02-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Dogo de Burdeos",
+          "url": "https://www.akc.org/dog-breeds/dogue-de-bordeaux/"
+        }
+      ]
+    },
+    {
+      "id": "caniche",
+      "nombre": "Caniche (estándar)",
+      "pais_origen": "Francia",
+      "real": {
+        "fci_numero": 172,
+        "fci_pais_origen_literal": "France",
+        "fci_uso_original": "Companion dog.",
+        "alzada_cm_macho": "45–60",
+        "alzada_cm_hembra": "45–60",
+        "peso_kg_macho": "27–32",
+        "peso_kg_hembra": "18–23",
+        "peso_fuente": "AKC (60-70 / 40-50 lb, estándar)",
+        "akc_altura": "más de 15 in (estándar)",
+        "akc_peso": "60-70 lb / 40-50 lb",
+        "esperanza_vida_anios": "10–18",
+        "vida_fuente": "AKC",
+        "notas": "FCI tiene 4 tamaños; acá se usa el estándar."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "débil",
+        "stats": {
+          "fuerza": 6,
+          "velocidad": 5,
+          "resistencia": 3,
+          "olfato": 6,
+          "lealtad": 7
+        },
+        "total": 27,
+        "oficios": [
+          "compañía/alerta",
+          "rescate/cobro"
+        ],
+        "precio_latas_estimado": 68
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 172 CANICHE",
+          "url": "https://www.fci.be/Nomenclature/Standards/172g09-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Caniche (estándar)",
+          "url": "https://www.akc.org/dog-breeds/poodle-standard/"
+        }
+      ]
+    },
+    {
+      "id": "briard",
+      "nombre": "Pastor de Brie (briard)",
+      "pais_origen": "Francia",
+      "real": {
+        "fci_numero": 113,
+        "fci_pais_origen_literal": "France",
+        "fci_uso_original": "Sheepdog and guard dog.",
+        "alzada_cm_macho": "62–68",
+        "alzada_cm_hembra": "56–64",
+        "peso_kg_macho": "25–45",
+        "peso_kg_hembra": "25–45",
+        "peso_fuente": "AKC (55-100 lb)",
+        "akc_altura": "23-27 in / 22-25.5 in",
+        "akc_peso": "55-100 lb",
+        "esperanza_vida_anios": "12",
+        "vida_fuente": "AKC",
+        "notas": "AKC da 12 años, sin rango."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "fuerte",
+        "stats": {
+          "fuerza": 8,
+          "velocidad": 7,
+          "resistencia": 8,
+          "olfato": 4,
+          "lealtad": 10
+        },
+        "total": 37,
+        "oficios": [
+          "pastoreo/ayuda",
+          "guardia"
+        ],
+        "precio_latas_estimado": 308
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 113 BERGER DE BRIE",
+          "url": "https://www.fci.be/Nomenclature/Standards/113g01-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Pastor de Brie (briard)",
+          "url": "https://www.akc.org/dog-breeds/briard/"
+        }
+      ]
+    },
+    {
+      "id": "bulldog_frances",
+      "nombre": "Bulldog francés",
+      "pais_origen": "Francia",
+      "real": {
+        "fci_numero": 101,
+        "fci_pais_origen_literal": "France",
+        "fci_uso_original": "Companion and Toy dog.",
+        "alzada_cm_macho": "27–35",
+        "alzada_cm_hembra": "24–32",
+        "peso_kg_macho": "9–14",
+        "peso_kg_hembra": "8–13",
+        "peso_fuente": "FCI",
+        "akc_altura": "11-13 in",
+        "akc_peso": "menos de 28 lb",
+        "esperanza_vida_anios": "10–12",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "débil",
+        "stats": {
+          "fuerza": 3,
+          "velocidad": 2,
+          "resistencia": 3,
+          "olfato": 4,
+          "lealtad": 7
+        },
+        "total": 19,
+        "oficios": [
+          "compañía/alerta"
+        ],
+        "precio_latas_estimado": 50
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 101 BOULEDOGUE FRANÇAIS",
+          "url": "https://www.fci.be/Nomenclature/Standards/101g09-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Bulldog francés",
+          "url": "https://www.akc.org/dog-breeds/french-bulldog/"
+        }
+      ]
+    },
+    {
+      "id": "labrador",
+      "nombre": "Labrador retriever",
+      "pais_origen": "Reino Unido",
+      "real": {
+        "fci_numero": 122,
+        "fci_pais_origen_literal": "Great Britain",
+        "fci_uso_original": "Retriever.",
+        "alzada_cm_macho": "56–57",
+        "alzada_cm_hembra": "54–56",
+        "peso_kg_macho": "29–36",
+        "peso_kg_hembra": "25–32",
+        "peso_fuente": "AKC (65-80 / 55-70 lb)",
+        "akc_altura": "22.5-24.5 in / 21.5-23.5 in",
+        "akc_peso": "65-80 lb / 55-70 lb",
+        "esperanza_vida_anios": "11–13",
+        "vida_fuente": "AKC",
+        "notas": "El estándar FCI cuenta que se originó en la costa de Terranova; país de patrocinio FCI: Gran Bretaña."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "medio",
+        "stats": {
+          "fuerza": 6,
+          "velocidad": 5,
+          "resistencia": 6,
+          "olfato": 10,
+          "lealtad": 7
+        },
+        "total": 34,
+        "oficios": [
+          "rescate/cobro",
+          "rastreo"
+        ],
+        "precio_latas_estimado": 176
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 122 LABRADOR RETRIEVER",
+          "url": "https://www.fci.be/Nomenclature/Standards/122g08-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Labrador retriever",
+          "url": "https://www.akc.org/dog-breeds/labrador-retriever/"
+        }
+      ]
+    },
+    {
+      "id": "golden",
+      "nombre": "Golden retriever",
+      "pais_origen": "Reino Unido",
+      "real": {
+        "fci_numero": 111,
+        "fci_pais_origen_literal": "Great Britain",
+        "fci_uso_original": "Gundog.",
+        "alzada_cm_macho": "56–61",
+        "alzada_cm_hembra": "51–56",
+        "peso_kg_macho": "29–34",
+        "peso_kg_hembra": "25–29",
+        "peso_fuente": "AKC (65-75 / 55-65 lb)",
+        "akc_altura": "23-24 in / 21.5-22.5 in",
+        "akc_peso": "65-75 lb / 55-65 lb",
+        "esperanza_vida_anios": "10–12",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "medio",
+        "stats": {
+          "fuerza": 6,
+          "velocidad": 6,
+          "resistencia": 3,
+          "olfato": 6,
+          "lealtad": 7
+        },
+        "total": 28,
+        "oficios": [
+          "rescate/cobro",
+          "compañía/alerta"
+        ],
+        "precio_latas_estimado": 152
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 111 GOLDEN RETRIEVER",
+          "url": "https://www.fci.be/Nomenclature/Standards/111g08-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Golden retriever",
+          "url": "https://www.akc.org/dog-breeds/golden-retriever/"
+        }
+      ]
+    },
+    {
+      "id": "beagle",
+      "nombre": "Beagle",
+      "pais_origen": "Reino Unido",
+      "real": {
+        "fci_numero": 161,
+        "fci_pais_origen_literal": "Great Britain",
+        "fci_uso_original": "Scent Hound.",
+        "alzada_cm_macho": "33–40",
+        "alzada_cm_hembra": "33–40",
+        "peso_kg_macho": "9–14",
+        "peso_kg_hembra": "9–14",
+        "peso_fuente": "AKC (<20 lb o 20-30 lb)",
+        "akc_altura": "hasta 13 in o 13-15 in",
+        "akc_peso": "<20 lb o 20-30 lb",
+        "esperanza_vida_anios": "10–15",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "débil",
+        "stats": {
+          "fuerza": 3,
+          "velocidad": 3,
+          "resistencia": 6,
+          "olfato": 9,
+          "lealtad": 5
+        },
+        "total": 26,
+        "oficios": [
+          "rastreo"
+        ],
+        "precio_latas_estimado": 64
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 161 BEAGLE",
+          "url": "https://www.fci.be/Nomenclature/Standards/161g06-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Beagle",
+          "url": "https://www.akc.org/dog-breeds/beagle/"
+        }
+      ]
+    },
+    {
+      "id": "border_collie",
+      "nombre": "Border collie",
+      "pais_origen": "Reino Unido",
+      "real": {
+        "fci_numero": 297,
+        "fci_pais_origen_literal": "Great Britain",
+        "fci_uso_original": "Sheepdog.",
+        "alzada_cm_macho": "≈53",
+        "alzada_cm_hembra": "algo menos",
+        "peso_kg_macho": "14–25",
+        "peso_kg_hembra": "14–25",
+        "peso_fuente": "AKC (30-55 lb)",
+        "akc_altura": "19-22 in / 18-21 in",
+        "akc_peso": "30-55 lb",
+        "esperanza_vida_anios": "12–15",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "medio",
+        "stats": {
+          "fuerza": 4,
+          "velocidad": 6,
+          "resistencia": 7,
+          "olfato": 4,
+          "lealtad": 7
+        },
+        "total": 28,
+        "oficios": [
+          "pastoreo/ayuda"
+        ],
+        "precio_latas_estimado": 152
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 297 BORDER COLLIE",
+          "url": "https://www.fci.be/Nomenclature/Standards/297g01-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Border collie",
+          "url": "https://www.akc.org/dog-breeds/border-collie/"
+        }
+      ]
+    },
+    {
+      "id": "greyhound",
+      "nombre": "Galgo inglés (greyhound)",
+      "pais_origen": "Reino Unido",
+      "real": {
+        "fci_numero": 158,
+        "fci_pais_origen_literal": "Great Britain",
+        "fci_uso_original": "Sighthound.",
+        "alzada_cm_macho": "71–76",
+        "alzada_cm_hembra": "68–71",
+        "peso_kg_macho": "29–32",
+        "peso_kg_hembra": "27–29",
+        "peso_fuente": "AKC (65-70 / 60-65 lb)",
+        "akc_altura": "28-30 in / 27-28 in",
+        "akc_peso": "65-70 lb / 60-65 lb",
+        "esperanza_vida_anios": "10–13",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "débil",
+        "stats": {
+          "fuerza": 6,
+          "velocidad": 10,
+          "resistencia": 4,
+          "olfato": 2,
+          "lealtad": 5
+        },
+        "total": 27,
+        "oficios": [
+          "persecución"
+        ],
+        "precio_latas_estimado": 68
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 158 GREYHOUND",
+          "url": "https://www.fci.be/Nomenclature/Standards/158g10-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Galgo inglés (greyhound)",
+          "url": "https://www.akc.org/dog-breeds/greyhound/"
+        }
+      ]
+    },
+    {
+      "id": "jack_russell",
+      "nombre": "Jack Russell terrier",
+      "pais_origen": "Reino Unido (Inglaterra)",
+      "real": {
+        "fci_numero": 345,
+        "fci_pais_origen_literal": "England (desarrollo: Australia)",
+        "fci_uso_original": "A good working Terrier with ability to go to ground. An excellent companion dog.",
+        "alzada_cm_macho": "25–30",
+        "alzada_cm_hembra": "25–30",
+        "peso_kg_macho": "≈5–6",
+        "peso_kg_hembra": "≈5–6",
+        "peso_fuente": "FCI (1 kg cada 5 cm)",
+        "akc_altura": null,
+        "akc_peso": null,
+        "esperanza_vida_anios": null,
+        "vida_fuente": null,
+        "notas": "AKC no tiene ficha de 'Jack Russell'; la de Russell Terrier es otra raza. Vida: sin dato verificado."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "débil",
+        "stats": {
+          "fuerza": 2,
+          "velocidad": 3,
+          "resistencia": 4,
+          "olfato": 6,
+          "lealtad": 4
+        },
+        "total": 19,
+        "oficios": [
+          "caza menor"
+        ],
+        "precio_latas_estimado": 50
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 345 JACK RUSSELL TERRIER",
+          "url": "https://www.fci.be/Nomenclature/Standards/345g03-en.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bloodhound",
+      "nombre": "Sabueso de San Huberto (bloodhound)",
+      "pais_origen": "Bélgica",
+      "real": {
+        "fci_numero": 84,
+        "fci_pais_origen_literal": "Belgium",
+        "fci_uso_original": "Scent hound for large game venery, service dog, tracking dog and family dog. It was and it must always remain a hound which due to its remarkable sense of sm...",
+        "alzada_cm_macho": "64–72",
+        "alzada_cm_hembra": "58–66",
+        "peso_kg_macho": "46–54",
+        "peso_kg_hembra": "40–48",
+        "peso_fuente": "FCI",
+        "akc_altura": "25-27 in / 23-25 in",
+        "akc_peso": "90-110 lb / 80-100 lb",
+        "esperanza_vida_anios": "10–12",
+        "vida_fuente": "AKC",
+        "notas": "FCI: ideal 68/62 cm ± 4."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "fuerte",
+        "stats": {
+          "fuerza": 9,
+          "velocidad": 6,
+          "resistencia": 6,
+          "olfato": 9,
+          "lealtad": 5
+        },
+        "total": 35,
+        "oficios": [
+          "rastreo"
+        ],
+        "precio_latas_estimado": 300
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 84 CHIEN DE SAINT-HUBERT",
+          "url": "https://www.fci.be/Nomenclature/Standards/084g06-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Sabueso de San Huberto (bloodhound)",
+          "url": "https://www.akc.org/dog-breeds/bloodhound/"
+        }
+      ]
+    },
+    {
+      "id": "malinois",
+      "nombre": "Pastor belga malinois",
+      "pais_origen": "Bélgica",
+      "real": {
+        "fci_numero": 15,
+        "fci_pais_origen_literal": "Belgium",
+        "fci_uso_original": "Originally a sheep dog, today a working dog (guarding, defence, tracking, etc.) and an all-purpose service dog, as well as a family dog.",
+        "alzada_cm_macho": "60–66",
+        "alzada_cm_hembra": "56–62",
+        "peso_kg_macho": "25–30",
+        "peso_kg_hembra": "20–25",
+        "peso_fuente": "FCI",
+        "akc_altura": "24-26 in / 22-24 in",
+        "akc_peso": "60-80 lb / 40-60 lb",
+        "esperanza_vida_anios": "14–16",
+        "vida_fuente": "AKC",
+        "notas": "FCI: promedio 62/58 cm, −2/+4 cm."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "fuerte",
+        "stats": {
+          "fuerza": 6,
+          "velocidad": 7,
+          "resistencia": 9,
+          "olfato": 6,
+          "lealtad": 10
+        },
+        "total": 38,
+        "oficios": [
+          "policía",
+          "pastoreo/ayuda"
+        ],
+        "precio_latas_estimado": 312
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 15 CHIEN DE BERGER BELGE (Malinois)",
+          "url": "https://www.fci.be/Nomenclature/Standards/015g01-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Pastor belga malinois",
+          "url": "https://www.akc.org/dog-breeds/belgian-malinois/"
+        }
+      ]
+    },
+    {
+      "id": "cane_corso",
+      "nombre": "Cane corso",
+      "pais_origen": "Italia",
+      "real": {
+        "fci_numero": 343,
+        "fci_pais_origen_literal": "Italy",
+        "fci_uso_original": "Utility dog, polyvalent.",
+        "alzada_cm_macho": "64–68",
+        "alzada_cm_hembra": "60–64",
+        "peso_kg_macho": "45–50",
+        "peso_kg_hembra": "40–45",
+        "peso_fuente": "FCI",
+        "akc_altura": "25-27.5 in / 23.5-26 in",
+        "akc_peso": "proporcional a la altura",
+        "esperanza_vida_anios": "9–12",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "fuerte",
+        "stats": {
+          "fuerza": 10,
+          "velocidad": 6,
+          "resistencia": 7,
+          "olfato": 6,
+          "lealtad": 8
+        },
+        "total": 37,
+        "oficios": [
+          "guardia",
+          "caza mayor"
+        ],
+        "precio_latas_estimado": 308
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 343 CANE CORSO ITALIANO",
+          "url": "https://www.fci.be/Nomenclature/Standards/343g02-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Cane corso",
+          "url": "https://www.akc.org/dog-breeds/cane-corso/"
+        }
+      ]
+    },
+    {
+      "id": "galgo_espanol",
+      "nombre": "Galgo español",
+      "pais_origen": "España",
+      "real": {
+        "fci_numero": 285,
+        "fci_pais_origen_literal": "Spain",
+        "fci_uso_original": "A dog hunting the hare in fast pursuit in open fields, being directed by his sight. Formerly he has also been used and can hunt other game animals like rabbi...",
+        "alzada_cm_macho": "62–70",
+        "alzada_cm_hembra": "60–68",
+        "peso_kg_macho": null,
+        "peso_kg_hembra": null,
+        "peso_fuente": null,
+        "akc_altura": null,
+        "akc_peso": null,
+        "esperanza_vida_anios": null,
+        "vida_fuente": null,
+        "notas": "Peso y vida sin dato verificado (el estándar FCI no da peso; AKC no lo registra)."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "débil",
+        "stats": {
+          "fuerza": 5,
+          "velocidad": 10,
+          "resistencia": 4,
+          "olfato": 2,
+          "lealtad": 5
+        },
+        "total": 26,
+        "oficios": [
+          "persecución"
+        ],
+        "precio_latas_estimado": 64
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 285 GALGO ESPAÑOL",
+          "url": "https://www.fci.be/Nomenclature/Standards/285g10-en.pdf"
+        }
+      ]
+    },
+    {
+      "id": "chihuahua",
+      "nombre": "Chihuahua",
+      "pais_origen": "México",
+      "real": {
+        "fci_numero": 218,
+        "fci_pais_origen_literal": "Mexico",
+        "fci_uso_original": "Companion dog.",
+        "alzada_cm_macho": null,
+        "alzada_cm_hembra": null,
+        "peso_kg_macho": "1–3",
+        "peso_kg_hembra": "1–3",
+        "peso_fuente": "FCI",
+        "akc_altura": "5-8 in",
+        "akc_peso": "no más de 6 lb",
+        "esperanza_vida_anios": "14–16",
+        "vida_fuente": "AKC",
+        "notas": "FCI solo mide el peso."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "débil",
+        "stats": {
+          "fuerza": 2,
+          "velocidad": 4,
+          "resistencia": 3,
+          "olfato": 4,
+          "lealtad": 7
+        },
+        "total": 20,
+        "oficios": [
+          "compañía/alerta"
+        ],
+        "precio_latas_estimado": 50
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 218 CHIHUAHUEÑO",
+          "url": "https://www.fci.be/Nomenclature/Standards/218g09-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Chihuahua",
+          "url": "https://www.akc.org/dog-breeds/chihuahua/"
+        }
+      ]
+    },
+    {
+      "id": "akita",
+      "nombre": "Akita",
+      "pais_origen": "Japón",
+      "real": {
+        "fci_numero": 255,
+        "fci_pais_origen_literal": "Japan",
+        "fci_uso_original": "Companion dog.",
+        "alzada_cm_macho": "64–70",
+        "alzada_cm_hembra": "58–64",
+        "peso_kg_macho": null,
+        "peso_kg_hembra": null,
+        "peso_fuente": null,
+        "akc_altura": "26-28 in / 24-26 in",
+        "akc_peso": "100-130 lb / 70-100 lb",
+        "esperanza_vida_anios": "10–14",
+        "vida_fuente": "AKC",
+        "notas": "FCI: 67/61 cm ± 3, sin peso. La ficha AKC 'Akita' corresponde al tipo americano (FCI 344 'American Akita'), por eso su peso no se usa."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "medio",
+        "stats": {
+          "fuerza": 8,
+          "velocidad": 6,
+          "resistencia": 5,
+          "olfato": 4,
+          "lealtad": 8
+        },
+        "total": 31,
+        "oficios": [
+          "guardia"
+        ],
+        "precio_latas_estimado": 164
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 255 AKITA",
+          "url": "https://www.fci.be/Nomenclature/Standards/255g05-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Akita",
+          "url": "https://www.akc.org/dog-breeds/akita/"
+        }
+      ]
+    },
+    {
+      "id": "shiba",
+      "nombre": "Shiba",
+      "pais_origen": "Japón",
+      "real": {
+        "fci_numero": 257,
+        "fci_pais_origen_literal": "Japan",
+        "fci_uso_original": "Hunting dog for birds and small animals. Companion dog.",
+        "alzada_cm_macho": "38–41",
+        "alzada_cm_hembra": "35–38",
+        "peso_kg_macho": "≈10",
+        "peso_kg_hembra": "≈8",
+        "peso_fuente": "AKC (23 / 17 lb)",
+        "akc_altura": "14.5-16.5 in / 13.5-15.5 in",
+        "akc_peso": "23 lb / 17 lb",
+        "esperanza_vida_anios": "13–16",
+        "vida_fuente": "AKC",
+        "notas": "FCI: 39,5/36,5 cm ± 1,5."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "débil",
+        "stats": {
+          "fuerza": 3,
+          "velocidad": 3,
+          "resistencia": 5,
+          "olfato": 9,
+          "lealtad": 7
+        },
+        "total": 27,
+        "oficios": [
+          "compañía/alerta",
+          "rastreo"
+        ],
+        "precio_latas_estimado": 68
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 257 SHIBA",
+          "url": "https://www.fci.be/Nomenclature/Standards/257g05-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Shiba",
+          "url": "https://www.akc.org/dog-breeds/shiba-inu/"
+        }
+      ]
+    },
+    {
+      "id": "husky",
+      "nombre": "Husky siberiano",
+      "pais_origen": "Estados Unidos (según FCI)",
+      "real": {
+        "fci_numero": 270,
+        "fci_pais_origen_literal": "U.S.A.",
+        "fci_uso_original": "Sledge dog.",
+        "alzada_cm_macho": "53,5–60",
+        "alzada_cm_hembra": "50,5–56",
+        "peso_kg_macho": "20,5–28",
+        "peso_kg_hembra": "15,5–23",
+        "peso_fuente": "FCI",
+        "akc_altura": "21-23.5 in / 20-22 in",
+        "akc_peso": "45-60 lb / 35-50 lb",
+        "esperanza_vida_anios": "12–14",
+        "vida_fuente": "AKC",
+        "notas": "Ojo: la FCI pone a EE. UU. como país de origen, no a Rusia."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "débil",
+        "stats": {
+          "fuerza": 5,
+          "velocidad": 5,
+          "resistencia": 7,
+          "olfato": 4,
+          "lealtad": 5
+        },
+        "total": 26,
+        "oficios": [
+          "tiro/resistencia"
+        ],
+        "precio_latas_estimado": 64
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 270 SIBERIAN HUSKY",
+          "url": "https://www.fci.be/Nomenclature/Standards/270g05-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Husky siberiano",
+          "url": "https://www.akc.org/dog-breeds/siberian-husky/"
+        }
+      ]
+    },
+    {
+      "id": "borzoi",
+      "nombre": "Borzoi (galgo ruso)",
+      "pais_origen": "Rusia",
+      "real": {
+        "fci_numero": 193,
+        "fci_pais_origen_literal": "Russia",
+        "fci_uso_original": "Hunting sighthound, racing and coursing hound. Borzoi is a hunting sighthound to be used mostly for chasing hare and fox, less for wolf hunting. Combines hig...",
+        "alzada_cm_macho": "75–85",
+        "alzada_cm_hembra": "68–78",
+        "peso_kg_macho": "34–48",
+        "peso_kg_hembra": "27–39",
+        "peso_fuente": "AKC (75-105 / 60-85 lb)",
+        "akc_altura": "28 in o más / 26 in o más",
+        "akc_peso": "75-105 lb / 60-85 lb",
+        "esperanza_vida_anios": "9–14",
+        "vida_fuente": "AKC",
+        "notas": null
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "medio",
+        "stats": {
+          "fuerza": 8,
+          "velocidad": 10,
+          "resistencia": 4,
+          "olfato": 2,
+          "lealtad": 5
+        },
+        "total": 29,
+        "oficios": [
+          "persecución"
+        ],
+        "precio_latas_estimado": 156
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 193 RUSSKAYA PSOVAYA BORZAYA",
+          "url": "https://www.fci.be/Nomenclature/Standards/193g10-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: Borzoi (galgo ruso)",
+          "url": "https://www.akc.org/dog-breeds/borzoi/"
+        }
+      ]
+    },
+    {
+      "id": "caucasico",
+      "nombre": "Pastor del Cáucaso",
+      "pais_origen": "Rusia (FCI: URSS)",
+      "real": {
+        "fci_numero": 328,
+        "fci_pais_origen_literal": "USSR",
+        "fci_uso_original": "Guard- and watchdog.",
+        "alzada_cm_macho": "68–75",
+        "alzada_cm_hembra": "64–70",
+        "peso_kg_macho": "≥50",
+        "peso_kg_hembra": "≥45",
+        "peso_fuente": "FCI",
+        "akc_altura": null,
+        "akc_peso": null,
+        "esperanza_vida_anios": null,
+        "vida_fuente": null,
+        "notas": "FCI: deseable 72–75 / 67–70 cm (mín. 68 / 64). Sin ficha AKC: vida sin dato verificado."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "medio",
+        "stats": {
+          "fuerza": 10,
+          "velocidad": 6,
+          "resistencia": 5,
+          "olfato": 4,
+          "lealtad": 8
+        },
+        "total": 33,
+        "oficios": [
+          "guardia"
+        ],
+        "precio_latas_estimado": 172
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 328 KAVKAZSKAÏA OVTCHARKA",
+          "url": "https://www.fci.be/Nomenclature/Standards/328g02-en.pdf"
+        }
+      ]
+    },
+    {
+      "id": "cimarron",
+      "nombre": "Cimarrón uruguayo",
+      "pais_origen": "Uruguay",
+      "real": {
+        "fci_numero": 353,
+        "fci_pais_origen_literal": "Uruguay",
+        "fci_uso_original": "Excellent for herding, big game hunting and guard.",
+        "alzada_cm_macho": "58–61",
+        "alzada_cm_hembra": "55–58",
+        "peso_kg_macho": "38–45",
+        "peso_kg_hembra": "33–40",
+        "peso_fuente": "FCI",
+        "akc_altura": null,
+        "akc_peso": null,
+        "esperanza_vida_anios": null,
+        "vida_fuente": null,
+        "notas": "Rioplatense. Vida sin dato verificado."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "fuerte",
+        "stats": {
+          "fuerza": 9,
+          "velocidad": 6,
+          "resistencia": 7,
+          "olfato": 6,
+          "lealtad": 8
+        },
+        "total": 36,
+        "oficios": [
+          "guardia",
+          "caza mayor"
+        ],
+        "precio_latas_estimado": 304
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 353 CIMARRÓN URUGUAYO",
+          "url": "https://www.fci.be/Nomenclature/Standards/353g02-en.pdf"
+        }
+      ]
+    },
+    {
+      "id": "fila",
+      "nombre": "Fila brasileño",
+      "pais_origen": "Brasil",
+      "real": {
+        "fci_numero": 225,
+        "fci_pais_origen_literal": "Brazil",
+        "fci_uso_original": "Watch Dog.",
+        "alzada_cm_macho": "65–75",
+        "alzada_cm_hembra": "60–70",
+        "peso_kg_macho": "≥50",
+        "peso_kg_hembra": "≥40",
+        "peso_fuente": "FCI",
+        "akc_altura": null,
+        "akc_peso": null,
+        "esperanza_vida_anios": null,
+        "vida_fuente": null,
+        "notas": "Vida sin dato verificado."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "fuerte",
+        "stats": {
+          "fuerza": 10,
+          "velocidad": 6,
+          "resistencia": 7,
+          "olfato": 6,
+          "lealtad": 8
+        },
+        "total": 37,
+        "oficios": [
+          "guardia",
+          "caza mayor"
+        ],
+        "precio_latas_estimado": 308
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 225 FILA BRASILEIRO",
+          "url": "https://www.fci.be/Nomenclature/Standards/225g02-en.pdf"
+        }
+      ]
+    },
+    {
+      "id": "amstaff",
+      "nombre": "American Staffordshire terrier",
+      "pais_origen": "Estados Unidos",
+      "real": {
+        "fci_numero": 286,
+        "fci_pais_origen_literal": "U.S.A.",
+        "fci_uso_original": null,
+        "alzada_cm_macho": "46–48",
+        "alzada_cm_hembra": "43–46",
+        "peso_kg_macho": "25–32",
+        "peso_kg_hembra": "18–25",
+        "peso_fuente": "AKC (55-70 / 40-55 lb)",
+        "akc_altura": "18-19 in / 17-18 in",
+        "akc_peso": "55-70 lb / 40-55 lb",
+        "esperanza_vida_anios": "12–16",
+        "vida_fuente": "AKC",
+        "notas": "Reemplaza al 'pitbull' del white paper: el American Pit Bull Terrier no está reconocido por FCI ni AKC."
+      },
+      "juego": {
+        "_aviso": "Diseño de juego, NO datos reales.",
+        "nivel": "medio",
+        "stats": {
+          "fuerza": 7,
+          "velocidad": 5,
+          "resistencia": 5,
+          "olfato": 6,
+          "lealtad": 7
+        },
+        "total": 30,
+        "oficios": [
+          "caza menor",
+          "guardia"
+        ],
+        "precio_latas_estimado": 160
+      },
+      "fuentes": [
+        {
+          "tipo": "FCI",
+          "titulo": "FCI-Standard N° 286 AMERICAN STAFFORDSHIRE TERRIER",
+          "url": "https://www.fci.be/Nomenclature/Standards/286g03-en.pdf"
+        },
+        {
+          "tipo": "AKC",
+          "titulo": "AKC: American Staffordshire terrier",
+          "url": "https://www.akc.org/dog-breeds/american-staffordshire-terrier/"
+        }
+      ]
+    }
+  ]
+}
