@@ -339,3 +339,35 @@ input[type=range]#m-vol{width:140px}
   .plots{grid-template-columns:1fr 1fr 1fr}
   #sidebtns .sq small{font-size:9px}
 }
+
+
+/* v0.4.1: toques en modal, huerta y minijuegos; rareza visible */
+#modal{pointer-events:auto;z-index:50;touch-action:manipulation}
+#modal .sheet,#mbody,button.dirt,button.plant-mini,button.gather-spot,button.mem-card,.pill,.shop-tab{
+  touch-action:manipulation;pointer-events:auto;-webkit-tap-highlight-color:rgba(255,211,90,.25)
+}
+body.modal-open #joy,body.modal-open #hud-br,body.modal-open #game canvas{pointer-events:none!important}
+.dirt{width:44px;height:44px;border-radius:22px;z-index:2;font-size:20px}
+.plant-mini{min-height:36px;padding:6px 10px}
+.recipe{display:flex;gap:10px;align-items:flex-start;padding:8px;border-radius:12px;background:#0003;border:1px solid #0006}
+.recipe .av{width:64px;height:64px;border-radius:10px;background:#2b1a12 center/80% no-repeat;flex:0 0 auto;border:2px solid #0008}
+.recipe .need{color:#f2c14e}.recipe .have{opacity:.9}
+.chip.rarity-lg{font:700 14px "Pixelify",system-ui;padding:3px 10px}
+.ntag .rarity-tag{font:700 11px "Pixelify";padding:1px 6px;border-radius:7px;line-height:1.2;text-shadow:0 1px 0 #000;border:1px solid #0008}
+.ntag .rarity-tag.rarity-comun{background:#4a4038;color:#f2e4c8}
+.ntag .rarity-tag.rarity-poco_comun{background:#2a5a32;color:#e8ffe8}
+.ntag .rarity-tag.rarity-raro{background:#2a3a6a;color:#e8f0ff}
+.ntag .rarity-tag.rarity-legendario{background:#6a4a18;color:#ffe9b0}
+.ntag .rarity-tag.rarity-mitico{background:#4a2a6a;color:#f0e0ff}
+#portrait{border-width:3px}
+#portrait.rarity-comun{box-shadow:0 0 0 2px #8a7a68}
+#portrait.rarity-poco_comun{box-shadow:0 0 0 2px #6ad07a}
+#portrait.rarity-raro{box-shadow:0 0 0 2px #6a8aff}
+#portrait.rarity-legendario{box-shadow:0 0 0 2px #f2c14e}
+#portrait.rarity-mitico{box-shadow:0 0 0 2px #d9a0ff}
+#breeder-xp{font:11px "Pixelify";opacity:.9;margin-top:2px}
+#breeder-xp .bar{height:5px;background:#0007;border-radius:3px;overflow:hidden;margin-top:2px}
+#breeder-xp .bar i{display:block;height:100%;background:#f2c14e;width:0}
+
+.ntag .yard-act{font-size:18px;line-height:1;margin-top:2px;text-align:center;filter:drop-shadow(0 1px 2px #000)}
+.plant-mini img{width:18px;height:18px;vertical-align:middle;margin-right:2px}
