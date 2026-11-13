@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#2a1a14">
+<meta name="description" content="Dog Zone: La Plaga — prototipo v0.1. Criá perros inmunes en un mundo con plaga.">
+<title>Dog Zone: La Plaga</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="game"></div>
+<div id="tags"></div>
+
+<!-- Pantalla de carga -->
+<div id="loading">
+  <div class="logo"><span class="l1">DOG ZONE</span><span class="l2">LA PLAGA</span></div>
+  <div class="bar"><i id="loadbar"></i></div>
+  <p id="loadtxt">Cargando el criadero…</p>
+</div>
+
+<!-- HUD -->
+<div id="hud" class="hidden">
+  <!-- arriba izquierda: retrato y stats -->
+  <div id="portrait" class="panel">
+    <div class="face" id="dogface"></div>
+    <div class="pstats">
+      <div class="pname" id="pdogname">Toby</div>
+      <div class="row"><span class="ic i-sword"></span><b id="st-fue">5</b><span class="ic i-heart"></span><b id="st-hp">60</b></div>
+      <div class="row"><span class="ic i-boot"></span><b id="st-vel">5</b><span class="ic i-nose"></span><b id="st-olf">5</b></div>
+      <div class="meter hunger" title="Hambre"><span class="ic i-bone sm"></span><div class="mbar"><i id="hungerbar"></i></div><b id="hungertxt">80%</b></div>
+      <div class="pstage" id="pstage">Adulto · Mestizo</div>
+    </div>
+  </div>
+
+  <!-- quest tracker -->
+  <div id="quest" class="panel">
+    <div class="qface"></div>
+    <div class="qtxt"><div class="qtitle" id="qtitle">Dale de comer a Toby</div><div class="qprog" id="qprog">0/1</div></div>
+    <span class="qarrow">▶</span>
+  </div>
+
+  <!-- arriba derecha: monedas, menú, minimapa -->
+  <div id="coins">
+    <div class="coin panel" title="Latas (Dogs): se ganan jugando"><span class="ic i-lata"></span><b id="latas">0</b></div>
+    <div class="coin panel" title="Chapitas (PDogs): premium, solo cosméticos"><span class="ic i-chapita"></span><b id="chapitas">0</b></div>
+    <button id="btn-menu" class="round panel" aria-label="Menú"><span class="burger"></span></button>
+  </div>
+  <div id="minimap" class="panel"><canvas id="mm" width="120" height="120"></canvas><div id="mmcoord">(0,0)</div></div>
+  <div id="zonename"></div>
+
+  <!-- izquierda: bolso / tienda / misión -->
+  <div id="leftbtns">
+    <button class="sq panel" id="btn-bag"><span class="ic i-bag lg"></span><small>Bolso</small></button>
+    <button class="sq panel" id="btn-shop"><span class="ic i-shop lg"></span><small>Tienda</small></button>
+    <button class="sq panel" id="btn-mission"><span class="ic i-map lg"></span><small>Misión</small><em id="mission-timer"></em></button>
+  </div>
+
+  <!-- derecha: ladrar -->
+  <button id="btn-bark" class="round big panel" aria-label="Ladrar"><span class="ic i-bark lg"></span></button>
+
+  <!-- abajo: joystick y acciones -->
+  <div id="joy"><div id="joyknob"></div></div>
+  <div id="actions">
+    <button id="btn-context" class="pill hidden"></button>
+    <div class="arow">
+      <button id="btn-potion" class="round panel" aria-label="Botiquín"><span class="ic i-potion lg"></span><em id="potions">2</em></button>
+      <button id="btn-attack" class="round huge panel" aria-label="Atacar"><span class="ic i-attack xl"></span><small>¡Atacar!</small></button>
+    </div>
+    <button id="btn-run" class="tag">CAMINAR</button>
+  </div>
+
+  <div id="toast"></div>
+</div>
+
+<!-- Modal genérico -->
+<div id="modal" class="hidden">
+  <div class="sheet panel">
+    <div class="sheethead"><h2 id="mtitle">Título</h2><button id="mclose" class="round" aria-label="Cerrar">✕</button></div>
+    <div id="mbody"></div>
+  </div>
+</div>
+
+<!-- Tutorial -->
+<div id="tut" class="hidden">
+  <div id="tutarrow"></div>
+  <div id="tutring"></div>
+  <div id="tutcard" class="panel">
+    <div class="tutdog"></div>
+    <p id="tuttext"></p>
+    <div class="tutbtns"><button id="tutskip" class="link">Saltar tutorial</button><button id="tutnext" class="pill">¡Dale!</button></div>
+  </div>
+</div>
+
+<noscript>Este juego necesita JavaScript.</noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>
