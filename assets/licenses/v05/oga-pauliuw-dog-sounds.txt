@@ -1,0 +1,12 @@
+Nota de licencia — Dog sounds
+Fecha de verificación: 13 de noviembre de 2026, hora de Argentina (America/Buenos_Aires, UTC-3)
+
+Autor: pauliuw
+Licencia: CC0 1.0, leída en la ficha de OpenGameArt (campo License(s): CC0)
+Ficha: https://opengameart.org/content/dog-sounds
+
+Se usaron solo los ladridos cortos «Dog Bark.wav», «Dog Bark 2.wav» y
+«Dog Bark 3.wav». No se usaron «Sad Dog», ni los takes largos («Dog.wav»,
+«Dog 1.wav», «Dog 2.wav»).
+
+Texto legal: licenses/CC0-1.0.txt

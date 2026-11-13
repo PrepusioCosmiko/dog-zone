@@ -1,0 +1,11 @@
+Nota de licencia — Zombie moans
+Fecha de verificación: 13 de noviembre de 2026, hora de Argentina (America/Buenos_Aires, UTC-3)
+
+Autor: Darsycho
+Licencia: CC0 1.0, leída en la ficha de OpenGameArt (campo License(s): CC0)
+Ficha: https://opengameart.org/content/zombie-moans
+Archivo: darsycho__zombie-moans_0.ogg (secuencia de ~15,8 s; no es un loop seamless)
+
+Usar a volumen bajo. No se incluyeron packs descritos como shrieks o screams.
+
+Texto legal: licenses/CC0-1.0.txt

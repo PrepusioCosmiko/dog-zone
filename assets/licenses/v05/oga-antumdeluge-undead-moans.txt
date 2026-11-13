@@ -1,0 +1,12 @@
+Nota de licencia — Undead Moans
+Fecha de verificación: 13 de noviembre de 2026, hora de Argentina (America/Buenos_Aires, UTC-3)
+
+Autor: AntumDeluge
+Licencia: CC0 1.0, leída en la ficha de OpenGameArt (campo License(s): CC0)
+Ficha: https://opengameart.org/content/undead-moans
+
+Se usaron undead-1.ogg a undead-4.ogg (gemidos/gruñidos cortos). El ZIP
+incluye el texto legal de CC0; se copió a licenses/antumdeluge-undead-moans-cc0.txt
+y a licenses/CC0-1.0.txt.
+
+Apto para todo público si se mantiene el volumen bajo. No son alaridos.

@@ -1,0 +1,43 @@
+Obra propia del estudio — declaración CC0 1.0
+Fecha: 13 de noviembre de 2026, hora de Argentina (America/Buenos_Aires, UTC-3)
+
+Autor: Arte y Animación, estudio de Dog Zone: La Plaga.
+
+Las piezas listadas abajo las dibujó o modeló el área de Arte de este
+estudio en esta ronda, en un estilo cercano al de Kenney, porque no se
+encontró un equivalente CC0 verificado en los packs revisados. Se publican
+bajo CC0 1.0 Universal (texto legal en licenses/CC0-1.0.txt). No se exige
+atribución; se agradece la mención al estudio.
+
+Íconos 2D (128 px, transparencia):
+  - iconos_cultivos/yerba.png
+  - iconos_cultivos/etapas/yerba_brote.png
+  - iconos_cultivos/etapas/yerba_creciendo.png
+  - iconos_cultivos/etapas/yerba_listo.png
+  - iconos_cultivos/etapas/cebolla_brote.png
+  - iconos_cultivos/etapas/cebolla_creciendo.png
+  - iconos_cultivos/etapas/cebolla_listo.png
+    (este último compone el dirt propio con el ícono onion.png de Kenney
+    Food Kit, CC0; el montículo es obra propia)
+
+Modelos 3D (GLB, low-poly, material PBR con baseColorFactor, recoloreables
+salvo donde se indica):
+  - modelos/huerta/regadera.glb          (nodos can_body, can_spout)
+  - modelos/zona/pelota.glb              (nodo ball)
+  - modelos/zona/hueso.glb               (nodo bone)
+  - modelos/zona/soga.glb                (nodo rope)
+  - modelos/cultivos/cebolla_brote.glb
+  - modelos/cultivos/cebolla_creciendo.glb
+  - modelos/cultivos/yerba_brote.glb
+  - modelos/cultivos/yerba_creciendo.glb
+  - modelos/cultivos/yerba_listo.glb
+  - el nodo dirt de modelos/cultivos/cebolla_listo.glb (el nodo onion es
+    Kenney Food Kit, CC0)
+  - el nodo water de modelos/camas/bebedero.glb (el bowl es Kenney Food Kit,
+    CC0; ver Texturas más abajo)
+
+No son obra propia (son CC0 de terceros, o composiciones de esos assets):
+  los íconos de cultivo restantes, los platos premium (compuestos con
+  previews de Kenney Food Kit), las camitas (almohadones Kenney Furniture
+  usados como cama), el comedero, la cerca, el césped, el árbol, las
+  parcelas, el cartel, el balde, la azada, y los cultivos Kenney/Quaternius.

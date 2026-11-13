@@ -1,0 +1,13 @@
+Nota de licencia — Whispers in the Fog
+Fecha de verificación: 13 de noviembre de 2026, hora de Argentina (America/Buenos_Aires, UTC-3)
+
+Autor: Ruhinre
+Licencia: CC0 1.0, leída en la ficha de OpenGameArt (campo License(s): CC0)
+Ficha: https://opengameart.org/content/whispers-in-the-fog
+
+Loop corto, seamless, de clima misterioso y etéreo. Ya se usó en la v0.4
+como música de zona. Acá se reutiliza (recodificado y normalizado a pico −1,5 dB)
+como ambiente de terror suave, apto para todo público si se deja más bajo
+que la música de aldea. No hay gritos.
+
+Texto legal: licenses/CC0-1.0.txt

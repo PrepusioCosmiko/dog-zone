@@ -1,0 +1,16 @@
+Nota de licencia — 80 CC0 creature SFX
+Fecha de verificación: 13 de noviembre de 2026, hora de Argentina (America/Buenos_Aires, UTC-3)
+
+Autor: rubberduck
+Licencia: CC0 1.0, leída en la ficha de OpenGameArt (campo License(s): CC0)
+Ficha: https://opengameart.org/content/80-cc0-creature-sfx
+
+Se usaron solo: barking_01.ogg, barking_02.ogg, eat_02.ogg, eat_03.ogg.
+No se copiaron scream, roar ni monster.
+
+En comentarios de esa misma ficha, el autor indica que varios efectos
+(incluido el ladrido) están hechos con la boca y filtros, no con un perro
+real. Se dejan como alternativa «cute»; los ladridos principales del pack
+vienen de pauliuw (grabación de perro, CC0).
+
+Texto legal: licenses/CC0-1.0.txt
