@@ -9,7 +9,9 @@
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;height:100%;overflow:hidden;background:#1b120d;color:var(--cream);font-family:"Fredoka",system-ui,sans-serif;touch-action:none;user-select:none;-webkit-user-select:none}
-#game{position:fixed;inset:0;touch-action:none}
+#stage{position:fixed;inset:0;overflow:hidden;background:#1b120d;transform-origin:top left;touch-action:none}
+body.forced-landscape #stage{width:100dvh;height:100dvw;top:0;left:0;transform:translateX(100dvw) rotate(90deg);transform-origin:top left}
+#game{position:absolute;inset:0;touch-action:none}
 #game canvas{display:block;width:100%!important;height:100%!important;touch-action:none}
 body.pixel #game canvas{image-rendering:pixelated;image-rendering:crisp-edges}
 button{font-family:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0;touch-action:manipulation}
@@ -18,7 +20,7 @@ button{font-family:inherit;color:inherit;border:0;background:none;cursor:pointer
 b,.pixel-font,.pname,.qtitle,.qprog,.coin b,h2,.tag,small{font-family:"Pixelify","Fredoka",monospace;letter-spacing:.3px}
 
 /* ---------- carga ---------- */
-#loading{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+#loading{position:absolute;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
   background:radial-gradient(circle at 50% 35%,#5b2a24 0,#2a1410 55%,#120906 100%)}
 .logo{display:flex;flex-direction:column;align-items:center;font-family:"Pixelify",monospace;text-shadow:0 4px 0 #000}
 .logo .l1{font-size:52px;color:var(--gold);-webkit-text-stroke:2px #3a1c08}
@@ -28,7 +30,7 @@ b,.pixel-font,.pname,.qtitle,.qprog,.coin b,h2,.tag,small{font-family:"Pixelify"
 #loadtxt{margin:0;opacity:.8}
 
 /* ---------- HUD (layout principal: landscape / de costado) ---------- */
-#hud{position:fixed;inset:0;pointer-events:none;z-index:10}
+#hud{position:absolute;inset:0;pointer-events:none;z-index:10}
 #hud>*{pointer-events:auto}
 #hud #zonename,#hud #toast{pointer-events:none}
 #hud #hud-br{pointer-events:none}
@@ -111,7 +113,7 @@ b,.pixel-font,.pname,.qtitle,.qprog,.coin b,h2,.tag,small{font-family:"Pixelify"
 #toast.show{opacity:1}
 
 /* etiquetas sobre personajes */
-#tags{position:fixed;inset:0;pointer-events:none;z-index:5}
+#tags{position:absolute;inset:0;pointer-events:none;z-index:5}
 .ntag{position:absolute;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:2px;white-space:nowrap;will-change:transform}
 .ntag .n{font:13px "Pixelify";color:#fff;text-shadow:0 0 3px #000,0 1px 0 #000}
 .ntag .role{font:12px "Pixelify";color:var(--gold);text-shadow:0 1px 0 #000}
@@ -124,7 +126,7 @@ b,.pixel-font,.pname,.qtitle,.qprog,.coin b,h2,.tag,small{font-family:"Pixelify"
 @keyframes rise{to{transform:translate(-50%,-160%);opacity:0}}
 
 /* modal */
-#modal{position:fixed;inset:0;z-index:30;background:#0008;display:flex;align-items:flex-end;justify-content:center}
+#modal{position:absolute;inset:0;z-index:30;background:#0008;display:flex;align-items:flex-end;justify-content:center}
 .sheet{width:min(520px,100%);max-height:78vh;display:flex;flex-direction:column;border-radius:18px 18px 0 0;padding:12px 12px calc(14px + var(--safe-b))}
 .sheethead{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
 .sheethead h2{margin:0;font-size:22px;color:var(--gold)}
@@ -147,7 +149,7 @@ b,.pixel-font,.pname,.qtitle,.qprog,.coin b,h2,.tag,small{font-family:"Pixelify"
 .sbar{height:7px;background:#0007;border-radius:4px;overflow:hidden}.sbar i{display:block;height:100%;background:var(--gold)}
 
 /* tutorial */
-#tut{position:fixed;inset:0;z-index:25;pointer-events:none}
+#tut{position:absolute;inset:0;z-index:25;pointer-events:none}
 /* pointer-events is not inherited: decorations default to auto and were eating joystick touches */
 #tut *{pointer-events:none}
 #tutcard{position:absolute;left:50%;transform:translateX(-50%);top:calc(40% - 40px);width:min(360px,88%);padding:12px 14px;display:flex;flex-direction:column;gap:8px;pointer-events:auto;background:linear-gradient(180deg,rgba(60,42,96,.96),rgba(32,22,56,.96));box-shadow:inset 0 0 0 2px rgba(210,170,255,.55),0 4px 0 #000a}
@@ -163,86 +165,84 @@ b,.pixel-font,.pname,.qtitle,.qprog,.coin b,h2,.tag,small{font-family:"Pixelify"
 #tutring{position:absolute;border:4px solid var(--gold);border-radius:50%;transform:translate(-50%,-50%);animation:ring 1.1s ease-out infinite;display:none}
 @keyframes ring{from{opacity:1;transform:translate(-50%,-50%) scale(.85)}to{opacity:0;transform:translate(-50%,-50%) scale(1.25)}}
 
-/* overlay: girá el teléfono (no bloquea el juego: hay "jugar igual") */
-#rotate{position:fixed;inset:0;z-index:40;display:flex;align-items:center;justify-content:center;padding:calc(16px + var(--safe-t)) calc(16px + var(--safe-r)) calc(16px + var(--safe-b)) calc(16px + var(--safe-l));background:rgba(10,6,4,.84);touch-action:none}
-.rotate-card{width:min(360px,92%);padding:22px 18px 18px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
-.rotate-card h2{margin:0;font-size:26px;color:var(--gold);line-height:1.2}
-.rotate-card p{margin:0;font-size:16px;line-height:1.35;opacity:.92}
+/* tip de giro: no tapa el juego; el landscape forzado ya está activo */
+#rotate{position:absolute;inset:0;z-index:40;display:flex;align-items:flex-start;justify-content:center;padding:calc(12px + var(--safe-t)) calc(16px + var(--safe-r)) calc(16px + var(--safe-b)) calc(16px + var(--safe-l));background:transparent;pointer-events:none;touch-action:none}
+.rotate-card{pointer-events:auto;width:min(340px,86%);padding:14px 14px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:8px}
+.rotate-card h2{margin:0;font-size:20px;color:var(--gold);line-height:1.2}
+.rotate-card p{margin:0;font-size:14px;line-height:1.35;opacity:.92}
+.rotate-card .link{margin-top:2px}
 .phone-turn{font-size:64px;line-height:1;animation:spinphone 1.6s ease-in-out infinite;filter:drop-shadow(0 3px 0 #000)}
 @keyframes spinphone{0%,100%{transform:rotate(0deg)}40%{transform:rotate(90deg)}60%{transform:rotate(90deg)}}
 
-/* landscape: más compacto, más mapa, respeta notches */
-@media (orientation: landscape){
-  #modal{align-items:flex-end;justify-content:center}
-  .sheet{width:min(560px,92%);max-height:88vh;border-radius:18px 18px 0 0;padding:12px 12px calc(12px + var(--safe-b))}
-  #toast{top:48%;max-width:50%}
-  #zonename{top:38%;font-size:20px}
-}
+/* layout de costado (viewport landscape o landscape forzado) */
+body.landscape-layout #modal{align-items:flex-end;justify-content:center}
+body.landscape-layout .sheet{width:min(560px,92%);max-height:88%;border-radius:18px 18px 0 0;padding:12px 12px calc(12px + var(--safe-b))}
+body.landscape-layout #toast{top:48%;max-width:50%}
+body.landscape-layout #zonename{top:38%;font-size:20px}
 
-/* teléfonos de costado (altura corta): comprimir HUD para no solaparse */
-@media (orientation: landscape) and (max-height: 480px){
-  #portrait{padding:4px 8px 4px 4px;gap:6px}
-  #portrait .face{width:48px;height:48px;border-width:2px}
-  .pstats{min-width:108px;gap:0}
-  .pname{font-size:13px}
-  .pstats .row{font-size:12px;gap:3px}
-  .pstats .row b{min-width:22px}
-  .mbar{height:7px}
-  .meter b{font-size:10px;width:30px}
-  .pstage{font-size:10px}
-  #quest{padding:4px 8px 4px 4px;max-width:220px}
-  #quest .qface{width:36px;height:36px}
-  .qtitle{font-size:12px}
-  .qprog{font-size:12px}
-  #mm{width:72px;height:72px}
-  #mmcoord{font-size:10px;margin-top:0}
-  .coin{padding:3px 8px 3px 4px;font-size:14px}
-  .round{width:40px;height:40px}
-  .round.huge{width:76px;height:76px}
-  .round.huge small{font-size:11px}
-  #joy{width:118px;height:118px;left:calc(12px + var(--safe-l));bottom:calc(10px + var(--safe-b))}
-  #joyknob{width:52px;height:52px;margin:-26px 0 0 -26px}
-  .sq{width:50px;height:50px;border-radius:12px}
-  .sq .ic.lg{width:24px;height:24px}
-  .sq small{font-size:9px}
-  #btn-fs{min-height:50px;height:auto}
-  #btn-fs small{font-size:9px}
-  #hud-br{gap:6px;right:calc(8px + var(--safe-r));bottom:calc(8px + var(--safe-b))}
-  #tutcard.high{top:calc(8px + var(--safe-t));width:min(360px,46vw)}
-  #tutcard.low{bottom:calc(16px + var(--safe-b));width:min(340px,42vw)}
-  #tuttext{font-size:15px}
-}
+/* altura corta del área de juego (teléfono de costado o forzado): comprimir HUD */
+body.short-hud #portrait{padding:4px 8px 4px 4px;gap:6px}
+body.short-hud #portrait .face{width:48px;height:48px;border-width:2px}
+body.short-hud .pstats{min-width:108px;gap:0}
+body.short-hud .pname{font-size:13px}
+body.short-hud .pstats .row{font-size:12px;gap:3px}
+body.short-hud .pstats .row b{min-width:22px}
+body.short-hud .mbar{height:7px}
+body.short-hud .meter b{font-size:10px;width:30px}
+body.short-hud .pstage{font-size:10px}
+body.short-hud #quest{padding:4px 8px 4px 4px;max-width:220px}
+body.short-hud #quest .qface{width:36px;height:36px}
+body.short-hud .qtitle{font-size:12px}
+body.short-hud .qprog{font-size:12px}
+body.short-hud #mm{width:72px;height:72px}
+body.short-hud #mmcoord{font-size:10px;margin-top:0}
+body.short-hud .coin{padding:3px 8px 3px 4px;font-size:14px}
+body.short-hud .round{width:40px;height:40px}
+body.short-hud .round.huge{width:76px;height:76px}
+body.short-hud .round.huge small{font-size:11px}
+body.short-hud #joy{width:118px;height:118px;left:calc(12px + var(--safe-l));bottom:calc(10px + var(--safe-b))}
+body.short-hud #joyknob{width:52px;height:52px;margin:-26px 0 0 -26px}
+body.short-hud .sq{width:50px;height:50px;border-radius:12px}
+body.short-hud .sq .ic.lg{width:24px;height:24px}
+body.short-hud .sq small{font-size:9px}
+body.short-hud #btn-fs{min-height:50px;height:auto}
+body.short-hud #btn-fs small{font-size:9px}
+body.short-hud #hud-br{gap:6px;right:calc(8px + var(--safe-r));bottom:calc(8px + var(--safe-b))}
+body.short-hud #tutcard.high{top:calc(8px + var(--safe-t));width:min(360px,46%)}
+body.short-hud #tutcard.low{bottom:calc(16px + var(--safe-b));width:min(340px,42%)}
+body.short-hud #tuttext{font-size:15px}
 
+/* retrato real (sin rotar el contenedor): el usuario eligió jugar en vertical */
 @media (orientation: portrait){
-  #tutcard.high,#tutcard.low,#tutcard{width:min(360px,88%)}
-  #tutcard.low{bottom:calc(170px + var(--safe-b))}
-  #tutcard.high{top:calc(200px + var(--safe-t))}
+  body:not(.forced-landscape) #tutcard.high,body:not(.forced-landscape) #tutcard.low,body:not(.forced-landscape) #tutcard{width:min(360px,88%)}
+  body:not(.forced-landscape) #tutcard.low{bottom:calc(170px + var(--safe-b))}
+  body:not(.forced-landscape) #tutcard.high{top:calc(200px + var(--safe-t))}
   /* deja el joystick + su halo (::before -28px) libres a la izquierda */
-  #hud-br{max-width:calc(100vw - 190px - var(--safe-l) - var(--safe-r))}
-  .sq{width:50px;height:50px}
-  #btn-fs{min-height:50px;height:auto}
-  .round.huge{width:76px;height:76px}
-  #joy{left:calc(12px + var(--safe-l))}
+  body:not(.forced-landscape) #hud-br{max-width:calc(100% - 190px - var(--safe-l) - var(--safe-r))}
+  body:not(.forced-landscape) .sq{width:50px;height:50px}
+  body:not(.forced-landscape) #btn-fs{min-height:50px;height:auto}
+  body:not(.forced-landscape) .round.huge{width:76px;height:76px}
+  body:not(.forced-landscape) #joy{left:calc(12px + var(--safe-l))}
 }
 
 @media (max-width: 420px) and (orientation: portrait){
-  #portrait{padding:4px 8px 4px 4px;gap:6px}
-  #portrait .face{width:46px;height:46px;border-width:2px}
-  .pstats{min-width:0}
-  .pname{font-size:13px}
-  .pstats .row{font-size:12px}
-  .pstage{font-size:10px}
-  #hud-tl{max-width:calc(100vw - 168px - var(--safe-l) - var(--safe-r))}
-  #quest{max-width:100%;padding:4px 8px 4px 4px}
-  #hud-tr{max-width:calc(100vw - 170px - var(--safe-l) - var(--safe-r))}
-  .coin{padding:3px 7px 3px 3px;font-size:14px}
-  .coin b{min-width:22px}
-  #mm{width:80px;height:80px}
-  .sq{width:50px;height:50px}
-  #btn-fs{min-height:50px}
-  .round.huge{width:72px;height:72px}
-  #joy{width:120px;height:120px}
-  #hud-br{right:calc(12px + var(--safe-r));bottom:calc(10px + var(--safe-b))}
+  body:not(.forced-landscape) #portrait{padding:4px 8px 4px 4px;gap:6px}
+  body:not(.forced-landscape) #portrait .face{width:46px;height:46px;border-width:2px}
+  body:not(.forced-landscape) .pstats{min-width:0}
+  body:not(.forced-landscape) .pname{font-size:13px}
+  body:not(.forced-landscape) .pstats .row{font-size:12px}
+  body:not(.forced-landscape) .pstage{font-size:10px}
+  body:not(.forced-landscape) #hud-tl{max-width:calc(100% - 168px - var(--safe-l) - var(--safe-r))}
+  body:not(.forced-landscape) #quest{max-width:100%;padding:4px 8px 4px 4px}
+  body:not(.forced-landscape) #hud-tr{max-width:calc(100% - 170px - var(--safe-l) - var(--safe-r))}
+  body:not(.forced-landscape) .coin{padding:3px 7px 3px 3px;font-size:14px}
+  body:not(.forced-landscape) .coin b{min-width:22px}
+  body:not(.forced-landscape) #mm{width:80px;height:80px}
+  body:not(.forced-landscape) .sq{width:50px;height:50px}
+  body:not(.forced-landscape) #btn-fs{min-height:50px}
+  body:not(.forced-landscape) .round.huge{width:72px;height:72px}
+  body:not(.forced-landscape) #joy{width:120px;height:120px}
+  body:not(.forced-landscape) #hud-br{right:calc(12px + var(--safe-r));bottom:calc(10px + var(--safe-b))}
 }
 
 /* íconos SVG embebidos */
