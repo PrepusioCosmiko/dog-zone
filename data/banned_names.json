@@ -1,0 +1,14 @@
+{
+  "comentario": "Lista propia, básica, de palabras ofensivas en español e inglés para nombres públicos de perros y criadores. No es exhaustiva. Se compara el nombre ya normalizado (minúsculas, sin acentos, leetspeak simple, sin separadores).",
+  "words": [
+    "puta", "puto", "putita", "putito", "putas", "putos",
+    "mierda", "carajo", "concha", "conchudo", "pija", "pija", "pito", "verga", "coño", "culo",
+    "cabron", "cabrona", "hijueputa", "hijodeputa", "forro", "forra", "pelotudo", "pelotuda",
+    "cagar", "cagada", "cagon", "cagona",
+    "porno", "pornografia", "violar", "violador", "violacion", "incesto",
+    "nazi", "estupido", "estupida", "idiota", "retrasado", "retrasada",
+    "fuck", "fucking", "fucked", "fucker", "motherfucker", "shit", "shitty", "asshole",
+    "bitch", "cunt", "dick", "cock", "pussy", "slut", "whore", "bastard",
+    "nigger", "nigga", "faggot", "retard", "rape", "rapist", "porn", "sex", "tits", "goddamn"
+  ]
+}
