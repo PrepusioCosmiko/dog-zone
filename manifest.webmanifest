@@ -1,12 +1,12 @@
 {
   "name": "Dog Zone: La Plaga",
   "short_name": "Dog Zone",
-  "description": "Criá perros inmunes en un mundo con plaga. Prototipo v0.1.",
+  "description": "Criá perros inmunes en un mundo con plaga. Prototipo v0.1.2. Se juega de costado.",
   "lang": "es-AR",
   "start_url": "./",
   "scope": "./",
   "display": "fullscreen",
-  "orientation": "portrait",
+  "orientation": "landscape",
   "background_color": "#1b120d",
   "theme_color": "#2a1a14",
   "icons": [
