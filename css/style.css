@@ -292,3 +292,50 @@ body.short-hud #tuttext{font-size:15px}
 .chip.lic-BY, .chip.lic-BY-SA{background:#3a5a3a;color:#e8ffe8}
 img.item-inline{width:28px;height:28px;vertical-align:middle;margin-right:6px;object-fit:contain}
 #acc-user,#acc-pass,#rec-user,#rec-code,#rec-pass{flex:1;min-width:140px;background:#1a140f;color:#f2e4c8;border:1px solid #000;border-radius:8px;padding:6px 8px}
+
+
+/* v0.4: tienda por secciones, rareza, huerta, anuncios de prueba */
+.shop-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.shop-tab{display:inline-flex;align-items:center;gap:6px;background:#2a221c;color:#f2e4c8;border:1px solid #000;border-radius:10px;padding:5px 8px;font:inherit;cursor:pointer}
+.shop-tab img{width:22px;height:22px;object-fit:contain}
+.shop-tab.on{background:#5a3a22;outline:2px solid #f2c14e}
+.shop-group{margin:10px 0 6px}
+.xp-bar{height:8px;background:#2a221c;border:1px solid #000;border-radius:6px;overflow:hidden;margin:4px 0 2px;min-width:120px}
+.xp-bar i{display:block;height:100%;background:#f2c14e;width:0}
+.xp-lbl{font-size:11px}
+.chip.rarity-comun{background:#4a4038}
+.chip.rarity-poco_comun{background:#2a5a32;color:#e8ffe8}
+.chip.rarity-raro{background:#2a3a6a;color:#e8f0ff}
+.chip.rarity-legendario{background:#6a4a18;color:#ffe9b0}
+.chip.rarity-mitico{background:#4a2a6a;color:#f0e0ff}
+img.portrait, img.av-photo{border-width:2px;border-style:solid}
+.plots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0}
+.plot{background:#2a221c;border:1px solid #000;border-radius:10px;padding:8px;min-height:80px}
+.plot.ready{outline:2px solid #f2c14e}
+.plot.needWater{outline:2px solid #6ab0ff}
+#ad-test-overlay{position:fixed;inset:0;background:rgba(10,8,6,.86);z-index:80;display:none;align-items:center;justify-content:center;padding:16px}
+#ad-test-overlay.show{display:flex}
+.ad-test-card{background:#241a14;border:2px solid #000;border-radius:16px;max-width:420px;width:100%;color:#f2e4c8;box-shadow:0 8px 30px #000}
+.ad-test-badge{position:absolute;margin:-10px 0 0 14px;background:#c0392b;color:#fff;font-weight:700;font-size:12px;letter-spacing:.04em;padding:3px 8px;border-radius:8px;border:1px solid #000;text-transform:lowercase}
+.ad-test-card{position:relative}
+.ad-test-body{padding:28px 16px 16px}
+.ad-test-title{font-size:20px;margin:0 0 8px}
+.ad-test-copy{margin:0 0 12px;font-size:14px}
+.ad-test-bar{height:10px;background:#1a140f;border:1px solid #000;border-radius:8px;overflow:hidden;margin:8px 0 14px}
+.ad-test-bar i{display:block;height:100%;width:0;background:#f2c14e}
+.ad-test-actions{display:flex;gap:8px;justify-content:flex-end}
+.compare-row{display:flex;gap:12px;align-items:flex-start}
+.compare-col{flex:1;text-align:center}
+.compare-face{width:120px;height:120px;margin:0 auto 8px}
+.mini-area{position:relative;height:140px;background:#3a2f28;border:1px solid #000;border-radius:12px;margin:8px 0}
+.dirt{position:absolute;background:#6a3a18;border:2px solid #f2c14e;color:#f2e4c8;font-size:18px;width:32px;height:32px;border-radius:16px;cursor:pointer;line-height:1;box-shadow:0 0 0 2px #000}
+.plant-mini{padding:4px 7px;font-size:12px;margin:2px 2px 0 0}
+.compare-face{border-width:3px !important}
+.compare-face.mitico{box-shadow:0 0 12px #8a4aba}
+.mem-grid,.gather-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0}
+.mem-card,.gather-spot{background:#2a221c;color:#f2e4c8;border:1px solid #000;border-radius:10px;padding:14px 0;font-size:20px;cursor:pointer}
+input[type=range]#m-vol{width:140px}
+@media (max-width: 900px){
+  .plots{grid-template-columns:1fr 1fr 1fr}
+  #sidebtns .sq small{font-size:9px}
+}
