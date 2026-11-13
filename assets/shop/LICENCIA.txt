@@ -1,0 +1,11 @@
+Íconos de los 5 módulos de la tienda (Perros, Comida, Skins/chalecos, Collares, Juguetes).
+
+Origen: arte propio del estudio Dog Zone: La Plaga, dibujados para esta propuesta v0.4
+el 13 de noviembre de 2026, hora de Argentina (America/Buenos_Aires, UTC-3).
+No se usaron íconos de terceros en estos PNG (Kenney Game Icons no trae perro, plato, chaleco, collar ni pelota).
+
+El estudio los cede al proyecto en CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/).
+Se pueden usar, adaptar y distribuir en el juego, también en comercial, sin atribución obligatoria.
+
+Archivos: perros.png, comida.png, skins.png, collares.png, juguetes.png (256×256)
+y las miniaturas *_128.png (128×128).
