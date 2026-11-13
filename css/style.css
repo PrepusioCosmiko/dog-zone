@@ -11,6 +11,7 @@
 html,body{margin:0;height:100%;overflow:hidden;background:#1b120d;color:var(--cream);font-family:"Fredoka",system-ui,sans-serif;touch-action:none;user-select:none;-webkit-user-select:none}
 #stage{position:fixed;inset:0;overflow:hidden;background:#1b120d;transform-origin:top left;touch-action:none}
 body.forced-landscape #stage{width:100dvh;height:100dvw;top:0;left:0;transform:translateX(100dvw) rotate(90deg);transform-origin:top left}
+body.forced-landscape.forced-rot-neg90 #stage{width:100dvh;height:100dvw;top:0;left:0;transform:translateY(100dvh) rotate(-90deg);transform-origin:top left}
 #game{position:absolute;inset:0;touch-action:none}
 #game canvas{display:block;width:100%!important;height:100%!important;touch-action:none}
 body.pixel #game canvas{image-rendering:pixelated;image-rendering:crisp-edges}
@@ -129,7 +130,8 @@ b,.pixel-font,.pname,.qtitle,.qprog,.coin b,h2,.tag,small{font-family:"Pixelify"
 #modal{position:absolute;inset:0;z-index:30;background:#0008;display:flex;align-items:flex-end;justify-content:center}
 .sheet{width:min(520px,100%);max-height:78vh;display:flex;flex-direction:column;border-radius:18px 18px 0 0;padding:12px 12px calc(14px + var(--safe-b))}
 .sheethead{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-.sheethead h2{margin:0;font-size:22px;color:var(--gold)}
+.sheethead h2{margin:0;font-size:22px;color:var(--gold);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ver-tag{display:inline-block;padding:2px 8px;border-radius:999px;background:#0006;color:var(--gold);font:600 12px "Pixelify",system-ui,sans-serif;letter-spacing:.03em;vertical-align:middle}
 #mclose{background:#0006;font-size:18px}
 #mbody{overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pan-y;display:flex;flex-direction:column;gap:8px;padding-bottom:4px}
 .card{display:flex;gap:10px;align-items:center;padding:8px;border-radius:12px;background:#0003;border:1px solid #0006}
