@@ -1,0 +1,10 @@
+Fuente verificada el 13 de noviembre de 2026, hora de Argentina (America/Buenos_Aires, UTC-3).
+
+Página: https://opengameart.org/content/quaint-town
+Título: Quaint Town
+Autor (campo Author de la página): neonarkade
+Tipo: Music
+Licencia declarada en la página: CC0
+Archivo usado: "Quaint Town - LOOPABLE.mp3" (https://opengameart.org/sites/default/files/Quaint%20Town%20-%20LOOPABLE.mp3), reconvertido a OGG Vorbis (q=3) para aligerar el juego. La adaptación de un archivo CC0 sigue siendo de uso libre.
+
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/

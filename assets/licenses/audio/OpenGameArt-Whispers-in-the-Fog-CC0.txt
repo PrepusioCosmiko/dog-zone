@@ -1,0 +1,11 @@
+Fuente verificada el 13 de noviembre de 2026, hora de Argentina (America/Buenos_Aires, UTC-3).
+
+Página: https://opengameart.org/content/whispers-in-the-fog
+Título: Whispers in the Fog
+Autor (campo Author de la página): Ruhinre
+Tipo: Music
+Licencia declarada en la página: CC0
+Descripción en la página: "Short, seamless dungeon crawler loop with a mysterious, ethereal mood."
+Archivo usado: whispers_in_the_fog.ogg (https://opengameart.org/sites/default/files/whispers_in_the_fog.ogg), sin recodificar.
+
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
