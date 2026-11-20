@@ -397,6 +397,10 @@ body:not(.landscape-layout):not(.forced-landscape) #sidebanners{top:auto;bottom:
 #sidebtns{position:relative}
 #drawer{display:none;position:absolute;right:calc(100% + 8px);bottom:0;flex-direction:column;gap:6px;padding:6px;border-radius:14px;z-index:8}
 body.drawer-open #drawer{display:flex}
+/* v0.6.2 post-QA (B1): con el Menú abierto el joystick no se traga los toques (en vertical tapaba Tienda, Bolso y Pueblo) */
+body.drawer-open #joy,body.drawer-open #joy::before,body.drawer-open #joyknob{pointer-events:none!important}
+body.drawer-open #joy{opacity:.25}
+body.drawer-open #hud-br{z-index:9}
 body.drawer-open #drawer .sq{width:auto;min-width:118px;height:48px;flex-direction:row;justify-content:flex-start;gap:8px;padding:0 10px}
 body.drawer-open #drawer .sq small{font-size:15px}
 /* roles */
@@ -448,3 +452,16 @@ body.landscape-layout #portrait{overflow:hidden}
 /* v0.6.2: los avisos se ven también con un panel abierto (ej. "criadero lleno" en la tienda) */
 #toasts{z-index:60;pointer-events:none}
 #hud.hidden ~ #toasts{display:none}
+
+/* v0.6.2 post-QA (B3): la etiqueta de 'Vos' se atenúa si la pisa la de un perro (no lo empuja) */
+.ntag.faded{opacity:.35}
+/* v0.6.3: tarjeta del criador en el Bolso */
+.breeder-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:6px 10px;margin:0 0 8px}
+.breeder-card .bc-top{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.breeder-card .bc-top .note{margin-left:auto}
+.breeder-card .bc-bar{height:8px;margin:4px 0}
+.breeder-card .note{font-size:12px;margin:2px 0}
+/* v0.6.3: sin modo vertical. En vertical, el aviso 'Girá el celu' tapa TODO (opaco) y bloquea los toques. */
+body.need-rotate #rotate{position:fixed;inset:0;z-index:2147483000;display:flex!important;align-items:center;justify-content:center;background:#140d0a;pointer-events:auto;touch-action:none}
+body.need-rotate #rotate .rotate-card{width:min(340px,86%);max-width:min(92%,420px);padding:18px 16px;margin:0;gap:10px;text-align:center}
+body.need-rotate #rotate .rotate-card h2{font-size:22px}
