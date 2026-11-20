@@ -33,7 +33,7 @@ b,.pixel-font,.pname,.qtitle,.qprog,.coin b,h2,.tag,small{font-family:"Pixelify"
 /* ---------- HUD (layout principal: landscape / de costado) ---------- */
 #hud{position:absolute;inset:0;pointer-events:none;z-index:10}
 #hud>*{pointer-events:auto}
-#hud #zonename,#hud #toast{pointer-events:none}
+#hud #zonename,#hud #toast,#hud #toasts,#hud #sidebanners{pointer-events:none}
 #hud #hud-br{pointer-events:none}
 #hud-br>*{pointer-events:auto}
 
@@ -141,7 +141,7 @@ b,.pixel-font,.pname,.qtitle,.qprog,.coin b,h2,.tag,small{font-family:"Pixelify"
 .card .s{font-size:13px;opacity:.85;line-height:1.3}
 .chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
 .chip{font:13px "Pixelify";padding:1px 6px;border-radius:8px;background:#0005}
-.chip.fuerte{background:#7a2a1c}.chip.medio{background:#6b5216}.chip.débil{background:#2c5a2a}
+/* v0.6: sin clasificación débil/medio/fuerte */
 .card .price{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
 .note{font-size:13px;opacity:.75;line-height:1.35}
 .menu-row{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:10px;background:#0003;gap:10px}
@@ -372,3 +372,49 @@ body.modal-open #joy,body.modal-open #hud-br,body.modal-open #game canvas{pointe
 
 .ntag .yard-act{font-size:18px;line-height:1;margin-top:2px;text-align:center;filter:drop-shadow(0 1px 2px #000)}
 .plant-mini img{width:18px;height:18px;vertical-align:middle;margin-right:2px}
+
+/* ======================== v0.6 ======================== */
+/* números claros: Fredoka con cifras tabulares (en Pixelify el 2 se confundía con el 8) */
+.num,.rarity-tag,#pstage,.sheet-line,#latas,#chapitas,#potions,#mission-timer,#qprog,#hungertxt,.pstats b,.price b,.xp-lbl,.chip,.sq em,.meter b,#mmcoord,.side-banner b,.toast-item b{
+  font-family:"Fredoka",system-ui,sans-serif!important;font-variant-numeric:tabular-nums lining-nums;font-feature-settings:"tnum" 1,"lnum" 1;letter-spacing:0}
+#latas,#chapitas{font-weight:600}
+/* avisos chicos al costado izquierdo, nunca en el centro; letra blanca; se van solos */
+#toast{display:none!important}
+#toasts{position:absolute;left:calc(10px + var(--safe-l, 0px));top:42%;display:flex;flex-direction:column;gap:6px;max-width:min(260px,38vw);z-index:6}
+.toast-item{font:600 13px/1.25 "Fredoka",system-ui,sans-serif;color:#fff;background:rgba(10,8,6,.72);border-left:3px solid #ffd35a;border-radius:10px;padding:6px 10px;
+  opacity:0;transform:translateX(-12px);transition:opacity .25s,transform .25s;text-shadow:0 1px 0 #000}
+.toast-item.show{opacity:1;transform:none}
+#sidebanners{position:absolute;left:calc(10px + var(--safe-l, 0px));top:calc(42% - 46px);display:flex;flex-direction:column;gap:6px;max-width:min(280px,40vw);z-index:6}
+.side-banner{font:600 13px/1.25 "Fredoka",system-ui,sans-serif;color:#fff;background:rgba(40,20,14,.85);border:2px solid #f2c14e;border-radius:10px;padding:6px 10px;opacity:0;transition:opacity .2s}
+.side-banner.show{opacity:1}
+.side-banner.sb-injured{border-color:#ff8a7a}
+.side-banner.sb-spot{border-color:#9dbb6a}
+body.portrait-play #toasts,body:not(.landscape-layout):not(.forced-landscape) #toasts{top:auto;bottom:calc(210px + var(--safe-b, 0px))}
+body:not(.landscape-layout):not(.forced-landscape) #sidebanners{top:auto;bottom:calc(210px + var(--safe-b, 0px) + 0px);transform:translateY(-100%)}
+/* menú desplegable: cerrado por defecto, botón fijo en la esquina */
+#btn-drawer .drawer-ic{font-size:24px;line-height:1}
+#btn-drawer[aria-expanded="true"]{outline:3px solid #ffd35a}
+#sidebtns{position:relative}
+#drawer{display:none;position:absolute;right:calc(100% + 8px);bottom:0;flex-direction:column;gap:6px;padding:6px;border-radius:14px;z-index:8}
+body.drawer-open #drawer{display:flex}
+body.drawer-open #drawer .sq{width:auto;min-width:118px;height:48px;flex-direction:row;justify-content:flex-start;gap:8px;padding:0 10px}
+body.drawer-open #drawer .sq small{font-size:15px}
+/* roles */
+.role-chip{background:#3a2e22}
+.role-chip.role-rastreador{background:#2c4a5a}.role-chip.role-pesado{background:#5a2c22}.role-chip.role-veloz{background:#4a4a1c}
+.sheet-line{font-family:"Fredoka",system-ui,sans-serif;font-weight:600}
+.spot-tag .n{font-size:13px;background:rgba(20,12,8,.8);padding:2px 6px;border-radius:6px}
+.quiz-a{margin:4px 2px}
+ul.need{margin:4px 0 6px 18px;padding:0;font-size:14px}
+.carta{font-style:italic}
+/* v0.6.1: aviso de puntos para repartir */
+#pick-notice{display:flex;align-items:center;gap:6px;margin-top:6px;padding:5px 10px;border:0;color:#fff;font:600 13px "Fredoka",system-ui,sans-serif;background:linear-gradient(180deg,#d99a1e,#a86d0c);box-shadow:inset 0 0 0 2px #ffd35a88,0 3px 0 rgba(0,0,0,.45);border-radius:10px;pointer-events:auto;cursor:pointer;max-width:250px;text-align:left}
+#pick-notice.hidden{display:none}
+#pick-notice.busy{opacity:.7;filter:saturate(.6)}
+#pick-notice .s{font-weight:400;opacity:.9}
+/* v0.6.1-b2 (V-1): el aviso de puntos queda por encima del área táctil del joystick */
+#hud-tl{z-index:6;pointer-events:none}
+#hud-tl>*{pointer-events:auto}
+#pick-notice{position:relative;z-index:7}
+/* V-2: etiqueta corta cuando no entra */
+.ntag.compact .rt-r{display:none}
